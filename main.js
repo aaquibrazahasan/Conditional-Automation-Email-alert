@@ -34,8 +34,6 @@ data = data1.filter(isColAAAWS);
               var Status = data[i][14]
 
 
-        
-       
               var TempleteBody = HtmlService.createTemplateFromFile('index.html').evaluate().getContent()
 
                 .replace("{SNo}",SNo)  
@@ -54,8 +52,6 @@ data = data1.filter(isColAAAWS);
                 .replace("{PendingDays}",PendingDays) 
                 .replace("{Status}",Status)
                  
- 
-
 
               Logger.log(TempleteBody)
 
@@ -63,10 +59,7 @@ data = data1.filter(isColAAAWS);
             GmailApp.sendEmail(Email,Subject,TempleteBody,{htmlBody:TempleteBody,name:"Insurance Alerts",cc : CC,bcc : BCC })
             //   GmailApp.sendEmail("jasbir.kaur@twigafiber.com",Subject,TempleteBody,{htmlBody:TempleteBody,name:"Insurance Alerts"})
      
-
-
-
-            }
+       }
 
   }
 
